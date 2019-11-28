@@ -2,6 +2,7 @@ terraform {
   required_providers {
     hcloud = ">= 1.15"
     cloudflare = ">= 2.1"
+    local = "~> 1.4"
   }
 }
 
