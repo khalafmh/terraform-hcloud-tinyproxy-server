@@ -1,0 +1,5 @@
+#cloud-config
+packages:
+  - "docker.io"
+runcmd:
+  - [docker, run, -d, --name, tinyproxy, --restart, always, -p, '8888:8888', dannydirect/tinyproxy, ANY]
