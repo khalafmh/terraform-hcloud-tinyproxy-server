@@ -2,13 +2,12 @@ terraform {
   required_providers {
     hcloud = ">= 1.15"
     cloudflare = ">= 2.1"
-    local = ">= 1.4"
+    local = "~> 1.4"
   }
 }
 
-data "local_file" "user_data" {
-  filename = "${path.module}/user-data.yaml"
-}
+provider "local" {}
+
 data "cloudflare_zones" "target_zone" {
   filter {
     name = var.dns_zone
