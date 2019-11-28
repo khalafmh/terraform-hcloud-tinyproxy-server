@@ -6,6 +6,8 @@ terraform {
   }
 }
 
+provider "local" {}
+
 data "cloudflare_zones" "target_zone" {
   filter {
     name = var.dns_zone
